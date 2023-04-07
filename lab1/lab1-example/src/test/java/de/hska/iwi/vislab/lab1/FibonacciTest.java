@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 
-import de.hska.iwi.vislab.lab1.example.ws.FibonacciService;
+import de.hska.iwi.vislab.lab1.example.ws.FibonacciServiceIntf;
 import de.hska.iwi.vislab.lab1.example.ws.FibonacciServiceImpl;
 
 public class FibonacciTest {
@@ -49,8 +49,8 @@ public class FibonacciTest {
 				"FibonacciServiceImplService"));
 
 		// create a proxy object for the fibonacci service interface
-		FibonacciService fibonacciService = service
-				.getPort(FibonacciService.class);
+		FibonacciServiceIntf fibonacciService = service
+				.getPort(FibonacciServiceIntf.class);
 
 		// call the service 25 times
 		int max = 25;
