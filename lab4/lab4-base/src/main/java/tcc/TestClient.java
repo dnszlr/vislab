@@ -86,7 +86,7 @@ public class TestClient {
 						confirmed = flightStatus == 200 && hotelStatus == 200;
 						if(!confirmed) {
 							// Update expired
-							expired = outputFlight.getExpires() == 0 && outputHotel.getExpires() == 0;
+							expired = outputFlight.getExpires() == 0 || outputHotel.getExpires() == 0;
 							System.out.println("Confirmation of flight or hotel failed, initiate retry, reservation expired? " + expired);
 						}
 						// Get
